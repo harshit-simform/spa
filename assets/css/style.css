@@ -23,13 +23,24 @@ body {
 .container {
   padding: 10px 10%;
 }
-.container > nav {
+.navbar {
+  width: 100%;
+  padding: 10px 10%;
+  position: fixed;
+  z-index: 10;
+  margin-top: 5px;
+  background: black;
+}
+.navbar h1 {
+  font-size: 25px;
+}
+.navbar > nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.container ul li {
+.navbar ul li {
   display: inline-block;
   list-style: none;
   /* text-decoration: none; */
@@ -58,6 +69,10 @@ nav ul li a:hover::after {
 .home-content {
   margin-top: 20%;
   font-size: 30px;
+  width: 60%;
+}
+.home-content p {
+  font-size: 20px;
 }
 .home-content h1 {
   font-size: 60px;
@@ -65,6 +80,16 @@ nav ul li a:hover::after {
 }
 .home-content span {
   color: var(--color-primary);
+}
+.home-content button {
+  margin-top: 10px;
+  color: var(--color-primary);
+  background-color: #080808;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 17px;
+  cursor: pointer;
 }
 .social-media a {
   display: inline-flex;

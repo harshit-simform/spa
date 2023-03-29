@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
   scroll-behavior: smooth;
+  list-style: none;
 }
 :root {
   --color-primary: #ff004f;
@@ -28,7 +29,7 @@ body {
   padding: 10px 10%;
   position: fixed;
   z-index: 10;
-  margin-top: 5px;
+  /* margin-top: 5px; */
   background: black;
 }
 .navbar h1 {
@@ -88,7 +89,8 @@ nav ul li a:hover::after {
   padding: 15px;
   border: 2px solid white;
   border-radius: 20px;
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
 }
 .social-media a {
@@ -106,6 +108,7 @@ nav ul li a:hover::after {
 }
 #about {
   padding: 80px 0;
+  height: 100vh;
 }
 .row {
   display: flex;
@@ -136,14 +139,17 @@ nav ul li a:hover::after {
 }
 .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 40px 0 25px;
 }
 .tab-links {
   margin-right: 50px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   cursor: pointer;
   position: relative;
+}
+.tab-links:hover {
+  color: var(--color-primary);
 }
 .tab-links::after {
   content: "";
@@ -157,4 +163,133 @@ nav ul li a:hover::after {
 }
 .tab-links.active-link::after {
   width: 50%;
+}
+.skills li {
+  margin: 20px, 0;
+  padding: 10px;
+}
+.bar {
+  background: white;
+  display: block;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(025, 0.8, 0.25, 1);
+  outline: none;
+}
+.bar span {
+  height: 10px;
+  float: left;
+  background: #ff004f;
+  border: none;
+  outline: none;
+  /* border-radius: 5px; */
+}
+.html {
+  width: 80%;
+  animation: html 3s;
+}
+.css {
+  width: 75%;
+  animation: css 3s;
+}
+.javascript {
+  width: 85%;
+  animation: javascript 3s;
+}
+.react {
+  width: 65%;
+  animation: react 3s;
+}
+.nodejs {
+  width: 80%;
+  animation: nodejs 3s;
+}
+.expressjs {
+  width: 70%;
+  animation: expressjs 3s;
+}
+.database {
+  width: 75%;
+  animation: database 3s;
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@keyframes react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@keyframes nodejs {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes expressjs {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes database {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+.tab-contents {
+  display: none;
+}
+.active-tab {
+  display: block;
+}
+.tab-contents ul li {
+  font-size: 18px;
+  font-weight: 500;
+  /* margin: 5px 0; */
+}
+.tab-contents ul li span {
+  /* height: 10px; */
+  font-size: 20px;
+  font-weight: 600;
+  /* margin: 10px; */
+}
+.tab-contents h3 {
+  margin: 10px 0;
+  color: var(--color-primary);
 }

@@ -27,16 +27,23 @@ observer.observe(aboutSection);
 const toggleTabs = document.querySelector(".tab-titles");
 toggleTabs.addEventListener("click", (e) => {
   const removeClass = toggleTabs.children;
-  console.log(removeClass);
-  for (let element of removeClass) {
-    element.classList.remove("active-link");
+  const targetElement = e.target;
+  console.log(targetElement.children.length);
+  // console();
+  if (e.target.children.length === 0) {
+    // console.log(e.target.innerText);
+    for (let element of removeClass) {
+      element.classList.remove("active-link");
+    }
+    tabcontent.forEach((element) => {
+      // console.log(element);
+      element.classList.remove("active-tab");
+    });
+    document
+      .getElementById(`${e.target.innerText.toLowerCase()}`)
+      .classList.add("active-tab");
+    e.target.classList.add("active-link");
+  } else {
+    return;
   }
-  tabcontent.forEach((element) => {
-    console.log(element);
-    element.classList.remove("active-tab");
-  });
-  document
-    .getElementById(`${e.target.innerText.toLowerCase()}`)
-    .classList.add("active-tab");
-  e.target.classList.add("active-link");
 });

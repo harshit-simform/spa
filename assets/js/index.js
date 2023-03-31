@@ -26,6 +26,7 @@ observer.observe(aboutSection);
 
 const toggleTabs = document.querySelector(".tab-titles");
 toggleTabs.addEventListener("click", (e) => {
+  console.log(e.target);
   const removeClass = toggleTabs.children;
   const targetElement = e.target;
   console.log(targetElement.children.length);

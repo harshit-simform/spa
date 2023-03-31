@@ -440,7 +440,6 @@ form .submit-btn {
 }
 /* /////////////////////////////////////////////////// slider */
 .card {
-  position: absolute; /*willl be removed in next release. */
   width: 320px;
   border-radius: 25px;
   background: #262626;
@@ -499,11 +498,4 @@ form .submit-btn {
 .description {
   text-align: center;
   font-weight: 600;
-}
-/* card wrapper will be removed in a future release */
-.card-wrapper {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  min-height: 45vh;
 }

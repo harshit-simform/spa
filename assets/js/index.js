@@ -1,6 +1,7 @@
 const aboutSection = document.querySelector("#about");
 const animatedElement = document.querySelectorAll(".bar");
 const tabcontent = document.querySelectorAll(".tab-contents");
+const sliderCards = document.querySelectorAll(".card");
 const options = {
   rootMargin: "0px",
   threshold: 0.5,
@@ -47,4 +48,47 @@ toggleTabs.addEventListener("click", (e) => {
   } else {
     return;
   }
+});
+// let counter = 0;
+// ////////////////////////////////// will be removed
+// function cardSlider(value) {
+//   console.log(sliderCards.length);
+//   if (counter == sliderCards.length) {
+//     counter = 0;
+//   }
+//   if (value == "next") {
+//     sliderCards[counter].classList.remove("active-card");
+//     counter++;
+//     console.log(counter);
+//     sliderCards[counter].classList.add("active-card");
+//   } else {
+//     sliderCards[counter].classList.remove("active-card");
+//     counter--;
+//     sliderCards[counter].classList.add("active-card");
+//   }
+// }
+
+let sliderNumber = 0;
+
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+
+prevButton.addEventListener("click", () => {
+  sliderCards[sliderNumber].classList.remove("active-card");
+  sliderNumber--;
+  if (sliderNumber < 0) {
+    sliderNumber = sliderCards.length - 1;
+  }
+  sliderCards[sliderNumber].classList.add("active-card");
+});
+
+nextButton.addEventListener("click", () => {
+  sliderCards[sliderNumber].classList.remove("active-card");
+  sliderNumber++;
+  if (sliderNumber >= sliderCards.length) {
+    console.log("in herer");
+    sliderNumber = 0;
+  }
+  console.log(sliderNumber);
+  sliderCards[sliderNumber].classList.add("active-card");
 });

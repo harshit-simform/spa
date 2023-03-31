@@ -505,5 +505,19 @@ form .submit-btn {
   display: flex;
   position: relative;
   justify-content: center;
+  align-items: center;
   min-height: 45vh;
+}
+.prev {
+  font-size: 50px;
+  position: absolute;
+  left: 25%;
+}
+.next {
+  font-size: 50px;
+  position: absolute;
+  right: 25%;
+}
+.active-card {
+  z-index: 10;
 }

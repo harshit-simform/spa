@@ -1,6 +1,7 @@
 const aboutSection = document.querySelector("#about");
 const animatedElement = document.querySelectorAll(".bar");
 const tabcontent = document.querySelectorAll(".tab-contents");
+const sideMenu = document.getElementById("sideMenu");
 const options = {
   rootMargin: "0px",
   threshold: 0.5,
@@ -78,3 +79,10 @@ var swiper = new Swiper(".slide-content", {
     },
   },
 });
+function toggleMenu(operation) {
+  if (operation === "open") {
+    sideMenu.style.right = "0px";
+  } else {
+    sideMenu.style.right = "-150px";
+  }
+}

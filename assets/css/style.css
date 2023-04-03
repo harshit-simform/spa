@@ -56,6 +56,9 @@ body {
 .navbar h1 {
   font-size: 25px;
 }
+nav .fa-solid {
+  display: none;
+}
 .navbar > nav {
   display: flex;
   align-items: center;
@@ -554,4 +557,96 @@ form .submit-btn {
 }
 .layer p {
   font-weight: 600;
+}
+@media only screen and (max-width: 600px) {
+  .home-content {
+    font-size: 10px;
+    width: 45%;
+    margin-top: 10%;
+  }
+  .home-content p {
+    font-size: 10px;
+  }
+  .home-content h1 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .social-media a {
+    font-size: 20px;
+    margin: 10px 0px 0px 0px;
+  }
+  .navbar nav i {
+    display: block;
+  }
+  nav ul {
+    background-color: var(--color-primary);
+    position: fixed;
+    top: 15px;
+    width: 150px;
+    /* height: 100vh; */
+    right: -150px;
+    z-index: 20;
+    transition: right 0.5s;
+  }
+  .fa-bars:hover nav > ul {
+    right: 0;
+  }
+  #sideMenu:hover {
+    right: 0px;
+  }
+  nav .fa-solid {
+    font-size: 25px;
+    display: block;
+  }
+  #sideMenu i {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #home,
+  #services,
+  #about,
+  #contact,
+  #testimonials,
+  #portfolio {
+    height: 100%;
+    width: 100%;
+  }
+  .home-content button {
+    padding: 7px;
+    border-radius: 12px;
+    font-size: 10px;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .service-list div i {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .service-list div h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .service-list div p {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .about-content {
+    font-size: 12px;
+    text-align: justify;
+  }
+  .tab-links {
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  .tab-contents ul li {
+    font-size: 14px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
 }

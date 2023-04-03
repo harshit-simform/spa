@@ -23,21 +23,23 @@
     <section class="navbar">
       <nav>
         <h1>Portfolio.</h1>
-        <ul>
+        <ul id="sideMenu">
           <li><a href="#">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#testimonials">Testimonial</a></li>
           <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="toggleMenu('close')"></i>
         </ul>
+        <i class="fa-solid fa-bars" onclick="toggleMenu('open')"></i>
       </nav>
     </section>
     <section id="home">
       <div class="container">
         <div class="home-content">
           <h2>FullStack Developer</h2>
-          <h1>Hi, I'm <span>Harshit Gupta</span> From India</h1>
+          <h1>Hi, I'm <span>Harshit Gupta</span></h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             eaque dignissimos nesciunt optio consectetur error, impedit facilis
